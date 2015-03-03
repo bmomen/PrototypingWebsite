@@ -1,3 +1,101 @@
 List of questions to use for Prototyping Website:
 
-1.
+1. In Java by default, what does clone() create?
+
+a) A deep copy 
+b) A shallow copy
+c) A full copy
+d) A raised copy
+
+answer: B
+
+2. What sort of software pattern is the Prototype Pattern?
+
+a) Creational
+b) Structural
+c) Behavioural 
+d) Domain
+
+answer: A
+
+3. Look at this section of Java code:
+
+package com.cakes;
+
+public interface Prototype {
+
+	public Prototype xxx;
+
+}
+
+What is the 'xxx' method?
+
+a) newClone();
+b) new Clone();
+c) Clone();
+d) doClone();
+
+answer: D
+
+4.
+
+a)
+b)
+c)
+d)
+
+answer:
+
+5.
+
+a)
+b)
+c)
+d)
+
+answer:
+
+6.
+
+a)
+b)
+c)
+d)
+
+answer:
+
+7.
+
+a)
+b)
+c)
+d)
+
+answer:
+
+8.
+
+a)
+b)
+c)
+d)
+
+answer:
+
+9.
+
+a)
+b)
+c)
+d)
+
+answer:
+
+10.
+
+a)
+b)
+c)
+d)
+
+answer:
