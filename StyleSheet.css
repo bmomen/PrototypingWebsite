@@ -1,7 +1,7 @@
 body{
 	font-family: arial,helvetica;
 	color: #333;
-	color: rgba(0,0,0,0.5);
+	color: rgba(0,0,0,.5);
 }
 
 .pagewrap{
@@ -13,21 +13,76 @@ body{
 
 h1{
 	postioning: relative;
+	float: left;
 	top: -5px;
 	padding: 5px;
-	margin-top: -10%;
-	float: left;
+	margin:  40px;
+	margin-top: -40px;
 	font-size: 6em;
 }
 
+	#section0{
+		background-size: cover;
+		background-image: url(OpenPagfe.png);
+	}
+	
 p{
 	positioning: relative;
 	float: left;
-	font-size: 1em;
-	width: 250px;
+	font-size: 1.2em;
+	width: 400px;
     height: 90px;
-	padding: 1%;
-    margin: 1%;
+	padding: 5px;
+    margin-left: 50px;
+	margin-right: 25px;
 }
+
+ul {
+	positioning: relative;
+	float: left;
+	font-size: 1.2em;
+	width: 350px;
+	height: 90px;
+	padding: 5px;
+    margin-left: 50px;
+	margin-right: 25px;
+}
+
+
+/* VIDEO CSS */
+
+	#myVideo{
+			position: absolute;
+			right: 0;
+			bottom: 0;
+			top:0;
+			right:0;
+			width: 100%;
+			height: 100%;
+			background-size: 100% 100%;
+			background-color: black; /* in case the video doesn't fit the whole page*/
+			background-image: /* our video */;
+			background-position: center center;
+			background-size: contain;
+			object-fit: cover; /*cover video background */
+			z-index:3;
+		}
+
+
+
+	/* Layer with position absolute in order to have it over the video
+	* --------------------------------------- */
+	#section1 .layer{
+		position: absolute;
+		z-index: 4;
+		width: 100%;
+		left: 0;
+		top: 43%;
+	}
+
+	/*solves problem with overflowing video in Mac with Chrome */
+	#section1{
+		overflow: hidden;
+	}
 
 div#test{ border:#000 1px solid; padding:10px 40px 40px 40px; }
