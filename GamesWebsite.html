@@ -93,6 +93,18 @@
 				renderQuestion();
 			}
 			window.addEventListener("load", renderQuestion, false);
+
+	</script>
+	
+	
+
+	<script type="text/javascript">
+		afterRender: function(){
+
+
+			//playing the video
+			$('video').get(0).play();
+		}
 	</script>
 	
 	</head>
@@ -105,27 +117,60 @@
 				<div class="section active" id="section0"><h1>Prototyping Design Pattern</h1></div>
 				
 				<div class="section" id="section1">
+
+								<video loop controls="false" id="myVideo">
+								<source src="PrototypingTemplate.mp4" type="video/mp4">
+								</video>
+
+				</div>
+				
+				<div class="section" id="section2">
 				
 					<div class="slide active ">
-						<h1>First off, what is a Design Pattern?</h1>
+						<h1>What is a Design Pattern?</h1>
 						 
-						 <p>A design pattern is a <b>general reusable solution</b> to a commonly occurring problem within a given context in software design!</p>
-						
-						<p> </p>
+						<p>When it comes to designing a program, it can pay in dividends to take some time and think about <b>how the code interacts with itself and others</b> . Failure to do so can result in working code which is heavily coupled, riddled with repetition, hacks and workarounds - fairly common if you've ever started a program without a clear plan in mind. A design pattern helps with this: <b>It is a general template used to solve common problems programmers have.</b></p>
+						<p>They are generally recognised as the best practices for programmers to follow as they are usually more efficient, readable and maintainable than patternless spaghetti-code. Object-oriented design patterns show how code is built so that there are specific relationships between classes or objects, without showing any specific final-class methods.</p>
 					</div>
 					
 					<div class="slide ">
-						<h1>Prototyping Design Pattern</h1>
-						<p>(CONTENT)</p>
+						<h1>Creational Design Patterns</h1>
+						<p>A creational design pattern is a specific subset of design pattern focused solely on programming objects in such a way that their creation, structure and representation are separate from the main system code. Object-creational patterns and Class-creational patterns are a further subset of creational design pattern that deal with creation and instantiation of their respective code. Uses for creational design patterns vary, but benefits can include:</p>
+
+							<ul>
+								<li> Hiding the implementations of a class library or product, revealing only their interfaces.</li>
+								<li> Constructing different representations of independent complex objects.</li>
+								<li> The ability to create a single instance that can be accessed at all times.</li>
+								<li> Separating a system of how its objects and products are created. </li>
+								<li> Class instantiations being specified and modified at run-time. </li>
+							<ul>
+
 					</div>
-																		
+					
+					<div class="slide">
+						<h1>The Prototyping Pattern</h1>
+						<p>Prototyping is a design pattern that is mainly used to avoid the cost of instantiating an entirely new instance of an object, and allows for an almost organic generation of new subclasses when handed different parameters. Prototyping starts with a single "Prototypical" instance which then has a "Clone" method applied to it to create a new, identical and totally separate clone of the prototype.  </p>
+						<p>Much like mitosis in cells, the prototype effectively "splits" itself, using reference values from the prototype to fill the empty shell. This is a shallow clone. A deep clone is created when a prototype is cloned, given a new name and new methods. It will inherit the values of the prototype and have the new methods and parameters. This helps cut down on repeating variables, and is much more memory efficient.</p>		
+					</div>
 					
 				</div>
 				
-								
-				<div class="section" id="section2">
+				<div class="section" id="section3">
+					<div class="slide active ">
+						<h1>Basic Implementation</h1>
+						<p> Let's say you are building a zombie survival game. It is a pretty basic game, so you only have one design for zombies. The game is based in a city centre, so there is a lot of zombies walking around, trying to "infect" the player. One way to create the zombies, is to instantiate a new object of the zombie spawner class for each zombie. This design has positives, but also some serious negatives. </p> 
+						<p> Using this method of creating new zombies is memory and processor intensive. This design could seriously slow down the game because for each zombie that is created, it will take up it's own space in memory as well as processor time for each instance spawned.</p>
+					</div>
+					<div class="slide">
+					<h1>Implementation Cont.</h1>
+						<p>Another method for creating the zombies would be to use the Prototyping Design Pattern. This would involve creating a prototype zombie. We would then clone this prototypical instance to spawn new zombies. This method is far less memory and processor intensive as it does not have to create a "true" instance. Each instance of the zombie is actually a "shallow" clone, with each of it's values just a reference to the main prototype.</p>
+						<p>This cuts down on memory space vastly. Another advantage of prototyping is that it can save time if the data for the objects has to be pulled in from a database, or another external source. New zombie types could also be easily created by the programmer with little fuss via deep cloning by calling the prototype method with additional parameters or statistics such as speed and damage.</p>
+
+					</div>
+				</div>
+				
+				<div class="section" id="section4">
 					<h1>Prototyping Quiz</h1>
-					<p>Hopefully you are now ready to try the Prototyping Design Pattern quiz!</p>
 					<h2 id="quiz_status"></h2>
 					<div id="quiz"></div>
 				</div>
