@@ -28,10 +28,11 @@ h1{
 	
 h4{
 	position: relative;
-	z-index: 10;
 	float: left;
-	top: -50px;
+	top: -10px;
+	left: -150px;
 }
+
 p{
 	positioning: relative;
 	float: left;
